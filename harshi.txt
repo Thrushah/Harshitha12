@@ -1,0 +1,55 @@
+import pandas as pd
+
+df=pd.read_csv('book1.csv')
+
+print(df)
+
+matched=df['cylinders']==8
+
+new_df=df[matched]
+
+print(new_df)
+
+a=df.groupby(['modelyear'])
+
+print(a)
+
+
+ mpg  cylinders  displacement  horsepower  weight  acceleration  \
+0    18          8           307       130.0    3504          12.0   
+1    15          8           350       165.0    3693          11.5   
+2    18          8           318         NaN    3436          11.0   
+3    16          8           304       150.0    3433          12.0   
+4    17          8           302       140.0    3449          10.5   
+
+ model year  origin                   car name  
+0           70       1  chevrolet chevelle malibu  
+1           70       1          buick skylark 320  
+2           70       1         plymouth satellite  
+3           70       1              amc rebel sst  
+4           70       1                ford torino  
+5           70       1           ford galaxie 500  
+
+ mpg  cylinders  displacement  horsepower  weight  acceleration  \
+0    18          8           307       130.0    3504          12.0   
+1    15          8           350       165.0    3693          11.5   
+2    18          8           318         NaN    3436          11.0   
+3    16          8           304       150.0    3433          12.0   
+4    17          8           302       140.0    3449          10.5   
+5    15          8           429       198.0    4341          10.0   
+
+model year  origin                   car name  
+0           70       1  chevrolet chevelle malibu  
+1           70       1          buick skylark 320  
+2           70       1         plymouth satellite  
+3           70       1              amc rebel sst  
+4           70       1                ford torino  
+5           70       1           ford galaxie 500  
+
+ mpg  cylinders  displacement  horsepower  weight  acceleration  \
+model year                                                                   
+70           19         19            19          17      19            19   
+
+            origin  car name  
+model year                    
+70              19        19  
